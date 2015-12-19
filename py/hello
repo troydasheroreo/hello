@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+
+import skilstak.colors as c
+
+"""Printing things, in Python """
+
+def print_plain(message):
+    """prints a plain 'ol message to the screen"""
+    print(message)
+
+def print_multi(message):
+    """prints your own text in individual colors"""
+    print(c.multi(message))
+
+def print_random(message):
+    """prints your text in random colors"""
+    while True:
+        print(c.rc() + message + c.x())
+
+def parseArgs():
+    if len(argv) == 1:
+
+    if len(argv) == 2:
+        if argv[1].startswith("-"):
+            print(
+
+if __name__ == '__main__':
+    from sys import argv
+    
+    name = "world"
+
+    if len(argv) == 2:
+        name = argv[1]
+        
+    message = ("hello " + name)
+    
+    try:
+        print_random(message)
+    except KeyboardInterrupt:
+        exit()
